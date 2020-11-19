@@ -1,0 +1,13 @@
+JwtKey:
+JwtTimeoutInSeconds: 3600
+LdapConnectionString:
+LdapProtocolVersion:
+DnsApiKey:
+VmcCspRefreshToken:
+VmcCspAuthUrl:
+VmcOrg:
+VmcOrgId:
+VmcSddc:
+VmcSddcId:
+NsxVmxAwsApiBaseUrl:
+LogFilepath:
