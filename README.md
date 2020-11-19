@@ -35,22 +35,18 @@ The following a simple example of using the portal to create the necessary resou
     5. Enter in the internal IP that the public IP should map to
         1. The public IP can map to any available IP on any network segment
         2. Any network segment can be used but the **U-DMZ-External (10.100.68.0/24)** network is recommended for user environment (UE) workloads that are public internet facing.  This IP could be the IP of your VM on the U-DMZ-External network or the IP of a load balancer virtual server (i.e., a virtual IP or VIP).
-        3. Ensure to reserve this IP from the [U-DMZ-External IP Addressing](https://confluence.eng.vmware.com/display/PSOEUCNP/PSO+Labs+U-DMZ-External+IP+Addressing) Confluence page and check that no servers are using the IP to avoid an IP conflict.
+        3. Ensure to reserve this IP from the U-DMZ-External IP Addressing Confluence page and check that no servers are using the IP to avoid an IP conflict.
     6. Leave the Enable Rule switch set to **on**
     7. Click **SUBMIT**
 8. Optionally review the Compute Gateway (CGW) Firewall Rules to ensure your workload specific traffic is allowed.
-    1. CGW rules can be created and modifed by lab admins only
+    1. CGW rules can be created and modified by lab admins only
     2. The following application services are allowed to all network segments:
         1. Kerberos (UDP 88) 
         2. HTTP (TCP port 80)
         3. HTTPS (TCP port 443)
-        4. AWCM (TCP port 2001)
-        5. Content Gateway (TCP port 2020 and 10443)
-        6. Horizon (TCP port 4172)
-        7. UAG (TCP port 8443)
-        8. LogInsight (TCP port 9543)
+        4. TCP ports 2001, 2020, 4172, 8443, 9543, and 10443
 9. Optionally download a wildcard web certificate for your app server
-    1. Click **Certifictes**
+    1. Click **Certificates**
     2. Click **DOWNLOAD** for the certificate specific to the DNS zone you created earlier (e.g., *.euclab.net)
     3. Unzip the downloaded file
     4. Install the PEM or PFX version of the cert on your app server or associate the load balancer virtual server with this cert if doing SSL/TLS inspection or re-encryption
@@ -58,7 +54,7 @@ The following a simple example of using the portal to create the necessary resou
 ## Integrations
 1. NS1 for DNS management
 2. NSX VMC AWS Integration API for public IP management
-3. NSX VMC Policy API for all other managment aspects
+3. NSX VMC Policy API for all other management aspects
 4. LDAP integration with Windows Active Directory for domain user account login and session management
 
 ## Technologies Used
@@ -67,4 +63,4 @@ The backend is a REST API app built using Python 3 and Flask.
 Both the frontend and backend are hosted on a Windows Server 2019 VM running IIS.
 
 ## Setup and Deployment
-Please see SETUP.md for guideance on setting up your server to host the web app, deploying for production use, and development setup.
+Please see SETUP.md for guidance on setting up your server to host the web app, deploying for production use, and development setup.
