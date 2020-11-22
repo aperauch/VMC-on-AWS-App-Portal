@@ -1,7 +1,7 @@
-# VMC Lab Portal
+# VMC Portal
 
 ## Overview
-The EUC Lab Portal is a self-service web application designed to help with administration and management of lab resources.  The Portal currently integrates with VMC, NSX-T, and NS1 for DNS management. It can be used to provision a public IP address, DNS, and public network access any VM workload hosted in the lab SDDC
+The VMC Portal is a self-service web application designed to help with administration and management of VMC on AWS resources.  The Portal currently integrates with VMC, NSX-T, and NS1 for DNS management. It can be used to provision a public IP address, DNS, and public network access any VM workload hosted in the SDDC
 
 ## Getting Started
 ### Simple Tutorial
@@ -25,7 +25,7 @@ The following a simple example of using the portal to create the necessary resou
     5. Enter the domain name for the record
     6. Paste in the public IP in the Record Answer(s) test field
     7. Click **SUBMIT**
-5. Create a NAT rule to map your public IP to an internal lab IP
+5. Create a NAT rule to map your public IP to an internal SDDC network segment IP
     1. Click **NAT Rules**
     2. Click **ADD NAT RULE**
     3. Enter a friendly name for the rule
@@ -34,7 +34,7 @@ The following a simple example of using the portal to create the necessary resou
     6. Leave the Enable Rule switch set to **on**
     7. Click **SUBMIT**
 6. Optionally review the Compute Gateway (CGW) Firewall Rules to ensure your workload specific traffic is allowed.
-    1. CGW rules can be created and modified by lab admins only
+    1. CGW rules can be created and modified by VMC admins only
 7. Optionally download a wildcard web certificate for your app server
     1. Click **Certificates**
     2. Click **DOWNLOAD** for the certificate specific to the DNS zone you created earlier
