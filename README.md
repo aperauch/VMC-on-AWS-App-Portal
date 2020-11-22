@@ -1,7 +1,7 @@
-# VMC Portal
+# VMC on AWS App Portal
 
 ## Overview
-The VMC Portal is a self-service web application designed to help with administration and management of VMC on AWS resources.  The Portal currently integrates with VMC, NSX-T, and NS1 for DNS management. It can be used to provision a public IP address, DNS, and public network access any VM workload hosted in the SDDC
+The VMC on AWS App Portal or simply VMC Portal is a self-service web application designed to help with administration and management of VMC on AWS resources.  The Portal currently integrates with VMC, NSX-T, and NS1 for DNS management. It can be used to provision a public IP address, DNS, and public network access any VM workload hosted in the SDDC
 
 ## Getting Started
 ### Simple Tutorial
